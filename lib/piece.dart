@@ -1,4 +1,4 @@
-import 'package:marboj_flutter_tetris/board.dart';
+import 'package:mario_blocks/board.dart';
 
 import 'values.dart';
 

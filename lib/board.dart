@@ -2,9 +2,9 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:marboj_flutter_tetris/piece.dart';
-import 'package:marboj_flutter_tetris/pixel.dart';
-import 'package:marboj_flutter_tetris/values.dart';
+import 'package:mario_blocks/piece.dart';
+import 'package:mario_blocks/pixel.dart';
+import 'package:mario_blocks/values.dart';
 
 /*
   GAME BOARD
@@ -59,7 +59,7 @@ class _GameBoardState extends State<GameBoard> {
 
     // Frame refresh rate
     // Duration frameRate = Duration(milliseconds: durations[currentDuration!]!);
-    Duration frameRate = Duration(milliseconds: 600);
+    Duration frameRate = const Duration(milliseconds: 600);
     gameLoop(frameRate);
   }
 
@@ -96,7 +96,7 @@ class _GameBoardState extends State<GameBoard> {
     showDialog(
         context:  context,
         builder: (context) => AlertDialog(
-          title: Text('Game Over'),
+          title: const Text('Game Over'),
           content: Text("Your score is: $currentScore"),
           actions: [
             TextButton(
@@ -106,7 +106,7 @@ class _GameBoardState extends State<GameBoard> {
 
                   Navigator.pop(context); // remove dialog
                 },
-                child: Text('Play Again'))
+                child: const Text('Play Again'))
           ],
         ));
   }
